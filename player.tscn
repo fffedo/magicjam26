@@ -6,9 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwge8"]
 size = Vector2(44, 44)
 
-[node name="Player" type="CharacterBody2D" unique_id=1635078746]
+[node name="Player" type="CharacterBody2D" unique_id=1635078746 node_paths=PackedStringArray("collisionShape", "spriteNode")]
 motion_mode = 1
 script = ExtResource("1_onrkg")
+collisionShape = NodePath("CollisionShape2D")
+spriteNode = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1455889943]
 position = Vector2(-1, -1)

@@ -87,7 +87,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQADAAQAAAABAAAAAQADAAQAAAACAAAAAQADAAQ
 tile_set = SubResource("TileSet_mr0nr")
 
 [node name="Player" parent="Real" unique_id=1635078746 node_paths=PackedStringArray("mainScene", "world") instance=ExtResource("3_hr5et")]
-position = Vector2(57, -54)
+position = Vector2(77, -64)
 motion_mode = 0
 mainScene = NodePath("../..")
 world = NodePath("..")
@@ -103,3 +103,5 @@ tile_set = SubResource("TileSet_mr0nr")
 position = Vector2(21, -37)
 mainScene = NodePath("../..")
 world = NodePath("..")
+Speed = 100.0
+JumpVelocity = -50.0
