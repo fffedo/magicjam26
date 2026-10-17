@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dshc3cx3f00yu"]
+
+[ext_resource type="Script" uid="uid://c8hul5ltsd71u" path="res://titleScreen.cs" id="1_v6p8y"]
+
+[node name="titleScreen" type="Control" unique_id=1789195674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v6p8y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2103184093]
+layout_mode = 0
+offset_right = 1278.0
+offset_bottom = 719.0
+alignment = 1
+
+[node name="startButton" type="Button" parent="VBoxContainer" unique_id=1257371845]
+layout_mode = 2
+text = "Start"
+
+[node name="settingsButton" type="Button" parent="VBoxContainer" unique_id=809792184]
+layout_mode = 2
+text = "Settings"
+
+[node name="quitButton" type="Button" parent="VBoxContainer" unique_id=766353205]
+layout_mode = 2
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=465561274]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 235.0
+offset_right = 393.0
+offset_bottom = 447.0
+theme_override_font_sizes/font_size = 48
+text = "Madly in love"
+
+[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]
