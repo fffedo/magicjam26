@@ -7,7 +7,6 @@
 size = Vector2(44, 44)
 
 [node name="Player" type="CharacterBody2D" unique_id=1635078746 node_paths=PackedStringArray("collisionShape", "spriteNode")]
-motion_mode = 1
 script = ExtResource("1_onrkg")
 collisionShape = NodePath("CollisionShape2D")
 spriteNode = NodePath("Sprite2D")

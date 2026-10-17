@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class MainScene : Node2D
 {
@@ -16,7 +15,11 @@ public partial class MainScene : Node2D
 
 	public override void _Process(double delta)
 	{
-		
+		if(Input.IsActionJustPressed("switch_world"))
+		{
+			CurrentWorld = CurrentWorld == CurrentWorld.Real ? CurrentWorld.Virtual : CurrentWorld.Real;
+			GD.Print("Current World: " + CurrentWorld);
+		}
 	}
 
 	public bool IsCurrentWorld(Node2D world)

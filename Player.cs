@@ -18,8 +18,6 @@ public partial class Player : CharacterBody2D
 	public float CrouchSpeed = 150.0f;
 	[Export]
 	public float JumpVelocity = -400.0f;
-	
-	private PlayerInstanceState playerInstanceState = PlayerInstanceState.Slave;
 
 	// Variables to store original collision shape and sprite values
 	private Vector2 originalShapeSize;
@@ -54,10 +52,6 @@ public partial class Player : CharacterBody2D
 		if(mainScene.IsCurrentWorld(world))
 		{
 			// is master
-			if(Input.IsActionJustPressed("switch_world"))
-			{
-				
-			}
 		}
 		else
 		{
