@@ -53,11 +53,16 @@ public partial class Player : CharacterBody2D
 	{
 		if(mainScene.IsCurrentWorld(world))
 		{
+			GetNode<TileMapLayer>("VirtualTerrain").Modulate = new Color(0, 0, 0, 0.5f);
+		}
+
+		if(mainScene.IsCurrentWorld(world))
+		{
 			// is master
-			if(Input.IsActionJustPressed("switch_world"))
+			/*if(Input.IsActionJustPressed("switch_world"))
 			{
 				
-			}
+			}*/
 		}
 		else
 		{
