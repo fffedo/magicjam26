@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ci3kbcvi2lgme"]
+
+[ext_resource type="Script" uid="uid://gtugy6jr33sk" path="res://VrHud.cs" id="1_7fhoi"]
+[ext_resource type="Texture2D" uid="uid://bicku3cka1drg" path="res://icon.svg" id="1_v1xwm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w5vyd"]
+load_path = "res://.godot/imported/cog-svgrepo-com.svg-27597c72772425549b616afdb3d57bbc.ctex"
+
+[node name="vrHud" type="Control" unique_id=1229239014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = 45.0
+offset_right = -43.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fhoi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=474363526]
+position = Vector2(88, 84)
+texture = ExtResource("1_v1xwm")
+
+[node name="Label" type="Label" parent="." unique_id=225118447]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 23.0
+offset_right = 343.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 24
+text = "Hint"
+
+[node name="pauseButton" type="Button" parent="." unique_id=19598899]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 23.0
+offset_right = 1046.0
+offset_bottom = 133.0
+icon = SubResource("CompressedTexture2D_w5vyd")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="pauseButton" to="." method="_on_pause_button_pressed"]

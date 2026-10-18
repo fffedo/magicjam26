@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dkbwpdx2mcg15" path="res://assets/real_world_tileset.png" id="2_61od6"]
 [ext_resource type="PackedScene" uid="uid://c5wxr2moaefb3" path="res://player.tscn" id="3_hr5et"]
 [ext_resource type="Texture2D" uid="uid://bo7eqdr27biu2" path="res://assets/virtual_world_tileset.png" id="4_61od6"]
+[ext_resource type="PackedScene" uid="uid://ci3kbcvi2lgme" path="res://vr_hud.tscn" id="5_2qqqv"]
 [ext_resource type="PackedScene" uid="uid://duc1rpr67sruc" path="res://CrtDistortionOverlay.tscn" id="5_6mfv6"]
+[ext_resource type="PackedScene" uid="uid://b3572qth5621f" path="res://pause_menu.tscn" id="7_we1jl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_61od6"]
 
@@ -177,4 +179,13 @@ motion_mode = 0
 mainScene = NodePath("../..")
 world = NodePath("..")
 
+[node name="vrHud" parent="Virtual" unique_id=1229239014 instance=ExtResource("5_2qqqv")]
+offset_left = -410.0
+offset_top = -259.0
+offset_right = -410.0
+offset_bottom = -259.0
+
 [node name="CrtDistortionOverlay" parent="." unique_id=248462423 instance=ExtResource("5_6mfv6")]
+
+[node name="pauseMenu" parent="." unique_id=974197237 instance=ExtResource("7_we1jl")]
+visible = false

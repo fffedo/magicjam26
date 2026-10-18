@@ -8,14 +8,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 356.0
+offset_right = 30.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hdmo1")
 
 [node name="Label" type="Label" parent="." unique_id=2043293492]
 layout_mode = 0
-offset_right = 335.0
-offset_bottom = 112.0
+offset_left = 13.0
+offset_top = 117.0
+offset_right = 348.0
+offset_bottom = 229.0
 theme_override_font_sizes/font_size = 32
 text = "Pause"
 
