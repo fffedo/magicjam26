@@ -76,6 +76,6 @@ public partial class SettingsScreen : Control
 	}
 	public void _on_back_button_pressed()
 {
-	GetTree().ChangeSceneToFile("res://title_screen.tscn");
+	NavigationManager.GoBack(GetTree());
 }
 }

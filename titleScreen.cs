@@ -31,7 +31,7 @@ public partial class titleScreen : Control
 	}
 	public void _on_settings_button_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://settings_screen.tscn");
+		NavigationManager.ChangeScene(GetTree(), "res://settings_screen.tscn");
 	}
 	public void _on_checkpoints_button_pressed()
 	{

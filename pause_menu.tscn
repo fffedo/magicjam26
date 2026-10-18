@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b3572qth5621f"]
+
+[ext_resource type="Script" uid="uid://dky14c8eukvw7" path="res://pauseMenu.cs" id="1_hdmo1"]
+
+[node name="Control" type="Control" unique_id=974197237]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="Label" type="Label" parent="." unique_id=2043293492]
+layout_mode = 0
+offset_right = 335.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 32
+text = "Pause"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1583099953]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 226.0
+
+[node name="continueButton" type="Button" parent="VBoxContainer" unique_id=926863093]
+layout_mode = 2
+text = "Continue"
+
+[node name="settingsButton" type="Button" parent="VBoxContainer" unique_id=100649039]
+layout_mode = 2
+text = "Settings"
+
+[node name="quitButton" type="Button" parent="VBoxContainer" unique_id=984634146]
+layout_mode = 2
+text = "Return to menu"
+
+[connection signal="pressed" from="VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]
