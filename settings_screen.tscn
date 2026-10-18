@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ewvte4piwvb1"]
+
+[ext_resource type="Script" uid="uid://d3oufgufb2wbe" path="res://SettingsScreen.cs" id="1_00yke"]
+
+[node name="settingsScreen" type="Control" unique_id=2005882783]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_00yke")
+
+[node name="settingsLabel" type="Label" parent="." unique_id=1774552479]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 45.0
+offset_right = 215.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1460843952]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 90.0
+offset_right = 380.0
+offset_bottom = 303.0
+alignment = 1
+
+[node name="masterLabel" type="Label" parent="VBoxContainer" unique_id=998195053]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="masterSlider" type="HSlider" parent="VBoxContainer" unique_id=243947144]
+layout_mode = 2
+
+[node name="sfxLabel" type="Label" parent="VBoxContainer" unique_id=2061946791]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="sfxSlider" type="HSlider" parent="VBoxContainer" unique_id=2133412851]
+layout_mode = 2
+
+[node name="musicLabel" type="Label" parent="VBoxContainer" unique_id=1298005704]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="musicSlider" type="HSlider" parent="VBoxContainer" unique_id=1058999053]
+layout_mode = 2
+
+[node name="distortionCheckbox" type="CheckBox" parent="VBoxContainer" unique_id=526187300]
+layout_mode = 2
+text = "Disable distortion"
+
+[node name="freakyCheckbox" type="CheckBox" parent="VBoxContainer" unique_id=1994430854]
+layout_mode = 2
+text = "Enable freaky mode
+"
+
+[node name="backButton" type="Button" parent="." unique_id=215030120]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 325.0
+offset_right = 205.0
+offset_bottom = 356.0
+text = "Back"
+
+[connection signal="value_changed" from="VBoxContainer/masterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/sfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/musicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="toggled" from="VBoxContainer/distortionCheckbox" to="." method="_on_distortion_checkbox_toggled"]
+[connection signal="toggled" from="VBoxContainer/freakyCheckbox" to="." method="_on_freaky_checkbox_toggled"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]

@@ -5,7 +5,7 @@ public partial class titleScreen : Control
 {
 	// Path to your main game scene configurable from the Inspector
 	[Export(PropertyHint.File, "*.tscn")]
-	private string mainGameScenePath = "res://MainScene.tscn";
+	private string mainGameScenePath = "res://mainScene.tscn";
 
 	/// <summary>
 	/// Receiver method for the StartButton's "pressed" signal.
@@ -28,5 +28,13 @@ public partial class titleScreen : Control
 	{
 		GD.PrintErr($"Quitting game");
 		GetTree().Quit();
+	}
+	public void _on_settings_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://settings_screen.tscn");
+	}
+	public void _on_checkpoints_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://checkpoints_screen.tscn");
 	}
 }

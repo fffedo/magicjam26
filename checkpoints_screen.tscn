@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dhum1rfroqxrl"]
+
+[ext_resource type="Script" uid="uid://putyk7f40keg" path="res://checkpointsScreen.cs" id="1_ncy21"]
+
+[node name="checkpoints_screen" type="Control" unique_id=1210582903]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ncy21")
+onePath = "uid://cm8oqkjpxbpkj"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1267233052]
+layout_mode = 0
+offset_right = 1056.0
+offset_bottom = 208.0
+
+[node name="1" type="Button" parent="GridContainer" unique_id=1935600044]
+layout_mode = 2
+text = "1"
+
+[connection signal="pressed" from="GridContainer/1" to="." method="_on_1_pressed"]
