@@ -37,7 +37,7 @@ layout_mode = 2
 
 [node name="sfxLabel" type="Label" parent="VBoxContainer" unique_id=2061946791]
 layout_mode = 2
-text = "Music Volume"
+text = "SFX Volume"
 
 [node name="sfxSlider" type="HSlider" parent="VBoxContainer" unique_id=2133412851]
 layout_mode = 2

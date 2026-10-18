@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkbwpdx2mcg15" path="res://assets/real_world_tileset.png" id="2_61od6"]
 [ext_resource type="PackedScene" uid="uid://c5wxr2moaefb3" path="res://player.tscn" id="3_hr5et"]
 [ext_resource type="Texture2D" uid="uid://bo7eqdr27biu2" path="res://assets/virtual_world_tileset.png" id="4_61od6"]
+[ext_resource type="PackedScene" uid="uid://duc1rpr67sruc" path="res://CrtDistortionOverlay.tscn" id="5_6mfv6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_61od6"]
 
@@ -175,3 +176,5 @@ collision_mask = 2
 motion_mode = 0
 mainScene = NodePath("../..")
 world = NodePath("..")
+
+[node name="CrtDistortionOverlay" parent="." unique_id=248462423 instance=ExtResource("5_6mfv6")]

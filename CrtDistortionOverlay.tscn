@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duc1rpr67sruc"]
+
+[ext_resource type="Shader" uid="uid://boxkprbw2cfmv" path="res://crt_distortion.gdshader" id="1_a8d8c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mr0nr"]
+shader = ExtResource("1_a8d8c")
+shader_parameter/barrel_distortion = 0.08
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/scanline_count = 300.0
+shader_parameter/scanline_opacity = 0.15
+
+[node name="CrtDistortionOverlay" type="CanvasLayer" unique_id=248462423]
+layer = 100
+
+[node name="DistortionRect" type="ColorRect" parent="." unique_id=393801919]
+material = SubResource("ShaderMaterial_mr0nr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

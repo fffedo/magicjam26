@@ -34,7 +34,8 @@ public partial class SettingsScreen : Control
 	/// </summary>
 	public void _on_distortion_check_box_toggled(bool toggledOn)
 	{
-		// Distortion effect logic to be implemented here later
+	// Pass false if "Disable Distortion" is checked
+		GameEvents.ToggleDistortionSetting(!toggledOn);
 	}
 
 	/// <summary>
